@@ -1,7 +1,10 @@
 .greeting
 	background-color: $color-black
 	color: $color-white
-	+padding-y(60px)
+	+padding-y(30px)
+
+	+min(sm)
+		+padding-y(60px)
 
 	+min(md)
 		+padding-y(100px)
@@ -10,3 +13,47 @@
 		+padding-y(120px)
 
 	&__subtitle
+		margin-bottom: 15px
+		font-size: 14px
+		color: $color-brand-1
+
+		+max(sm)
+			br
+				display: none
+
+		+min(sm)
+			margin-bottom: 30px
+
+	&__title
+		margin-bottom: 30px
+		font-size: 40px
+		line-height: 1.1
+		+font('b')
+
+		+min(lg)
+			font-size: 45px
+
+		+min(md)
+			font-size: 50px
+
+		+min(lg)
+			font-size: 58px
+
+	&__motivation
+		margin-bottom: 30px
+		font-size: 18px
+
+		+min(sm)
+			font-size: 20px
+			margin-bottom: 45px
+
+		+min(lg)
+			font-size: 21px
+
+	&__btn
+		margin-bottom: 30px
+		+min(sm)
+			margin-bottom: 40px
+
+	&__place
+		font-size: 14px

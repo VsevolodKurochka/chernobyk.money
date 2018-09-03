@@ -28,7 +28,7 @@
 		+padding-y(30px)
 
 		+min(sm)
-			+padding-y(60px)
+			+padding-y(45px)
 
 		+min(md)
 			+padding-y(100px)
@@ -87,25 +87,44 @@
 		font-size: 14px
 
 	&__bg
+		+min(sm)
+			+absolute(0, 0)
+			width: 65%
+
 		+min(md)
-			+absolute(0, -150px)
+			right: -150px
+			width: auto
 
 	&__dollar
-		+min(md)
+		+min(sm)
 			position: absolute
 
+			&_1
+				right: 290px
+				bottom: 75px
+				transform: rotate(-30deg)
+				max-width: 200px
+
+			&_2
+				right: 170px
+				bottom: 75px
+				transform: rotate(70deg)
+				max-width: 250px
+
+			&_3
+				right: 135px
+				bottom: -5px
+				max-width: 300px
+				
+		+min(md)
 			&_1
 				right: 320px
 				bottom: 40px
 				max-width: 300px
-				transform: rotate(-30deg)
-
 			&_2
 				right: 220px
 				bottom: 80px
 				max-width: 280px
-				transform: rotate(70deg)
-
 			&_3
 				right: 110px
 				bottom: -55px

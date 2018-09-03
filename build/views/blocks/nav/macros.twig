@@ -27,16 +27,8 @@
 	</nav>
 {% endmacro %}
 
-{% macro nav_addition(type,  class) %}
+{% macro nav_addition(class) %}
 	<div class="nav__addition {{class}}" id="js-nav-addition">
-		{% if type == '1' %}
-			<button  class="btn effect effect_bounce-top nav__addition-btn" data-action="modal" data-open="#modal-form">Оставить заявку</button>
-		{% elseif type == '2' %}
-			<div class="nav__addition-links js-nav-links">
-				<a class="nav__addition-link" href="tel: +1">+99 999 999 99</a>
-				<a class="nav__addition-link" href="tel: +1">+99 999 999 99</a>
-			</div>
-		{% endif %}
-		
+		<button class="btn effect effect_bounce-top nav__addition-btn" data-action="modal" data-open="#modal-form">Оставить заявку</button>
 	</div>
 {% endmacro %}

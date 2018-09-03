@@ -27,21 +27,22 @@
 	]
 %}
 <section class="problem">
-	<div class="container">
+	<div class="container problem__container">
 		<div class="row">
-			<div class="col-12 col-md-10 col-lg-8">
+			<div class="col-12 col-md-10 col-lg-9 problem__content">
 				<h3 class="section__title problem__title"><strong>БОЛЬШИНСТВО ЛЮДЕЙ</strong> <br>СТАЛКИВАЕТСЯ КАК МИНИМУМ <br>С ОДНОЙ ИЗ <strong>ЭТИХ ПРОБЛЕМ</strong></h3>
 				<div class="row problem__items">
 					{% set i = 0 %}
 					{% for item in items %}
 						{% set i = i + 1 %}
-						<div class="col-12 col-sm-6 col-md-3 problem__item">
-							<p class="problem__item-number">0{{i}}</p>
-							<div class="problem__item-content">{{item.content}}</div>
+						<div class="col-12 col-sm-6 col-md-3 number-item">
+							<p class="number-item__number">0{{i}}</p>
+							<div class="number-item__content">{{item.content}}</div>
 						</div>
 					{% endfor %}
 				</div>
 			</div>
 		</div>
 	</div>
+	<img src="img/problem-image.jpg" alt="" class="problem__image">
 </section>

@@ -1,0 +1,23 @@
+.number-item
+	&:not(:last-child)
+		margin-bottom: 30px
+		
+	&__number
+		margin-bottom: 10px
+		font-size: 30px
+		line-height: 1
+		color: $color-brand-1
+		+font('b')
+
+		+min(sm)
+			font-size: 40px
+
+		+min(md)
+			margin-bottom: 15px
+			font-size: 45px
+
+		+min(lg)
+			font-size: 60px
+
+	&__content
+		font-size: 14px

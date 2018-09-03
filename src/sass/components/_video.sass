@@ -1,0 +1,33 @@
+.video
+	font-size: 0
+	+relative()
+	height: 250px
+
+	+min(sm)
+		height: 300px
+
+	+min(md)
+		height: 420px
+
+	&:before
+		content: ""
+		+absolute(0, null, null, 0)
+		+size(100%)
+		background-image: linear-gradient( -133deg, rgb(0,0,0) 0%, rgb(15,15,32) 100%)
+		opacity: 0.8
+
+	&__image
+		+size(100%)
+		object-fit: cover
+
+	&__button
+		+absolute(50%, null, null, 50%)
+		transform: translate(-50%, -50%)
+		+size(45px)
+		+bg('../img/video-play.png')
+
+		border: none
+		background-color: transparent
+
+		+min(sm)
+			+size(90px)

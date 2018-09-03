@@ -3,4 +3,49 @@
 	&__title
 		+font('b')
 		+min(lg)
-			font-size: 80px
+			font-size: 70px
+
+	&__step
+		+offset()
+		+min(sm)
+			align-items: center
+			justify-content: center
+			+offset(90px)
+			&:nth-child(even)
+				flex-direction: row-reverse
+
+		&-title
+			line-height: 1.1
+			text-transform: uppercase
+			+font('b')
+			margin-bottom: 15px
+
+			+min(md)
+				font-size: 30px
+
+			+min(lg)
+				font-size: 36px
+
+		&-content
+			margin-bottom: 30px
+			+font('l')
+			p
+				+offset(15px)
+
+		&-btn
+			display: inline-block
+			border: none
+			background-color: transparent
+			font-size: 19px
+			color: $color-brand-2
+			border-bottom: 1px solid $color-brand-2
+			text-transform: uppercase
+			+font('b')
+			+transition()
+
+			&:hover
+				color: $color-brand-1
+				border-bottom-color: $color-brand-1
+
+			+min(md)
+				font-size: 21px

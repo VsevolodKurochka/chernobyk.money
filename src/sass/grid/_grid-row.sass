@@ -1,0 +1,16 @@
+/// Clearfix.
+=cf
+	&:after, &:before
+		content: ""
+		display: table
+
+	&:after
+		clear: both
+
+@if getComp(flex) == true
+	+b("flex")
+		+row()
+
+	+b("row")
+		+row()
+		+margin-x( -(getComp(gutter)) )

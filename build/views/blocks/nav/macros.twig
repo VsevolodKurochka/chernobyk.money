@@ -1,0 +1,42 @@
+{% macro nav_hamburger() %}
+	<button class="hamburger hamburger_effect-2" type="button" id="js-nav-hamburger">
+		<span class="hamburger__lines">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</span>
+	</button>
+{% endmacro %}
+
+{% macro nav_logo(class) %}
+	{% import _self as macros %}
+	<div class="nav__logo {{class}}">
+		{{ macros.nav_hamburger() }}
+		<div class="nav__logo-content"><img class="nav__logo-content-img" src="img/logo.png" alt="" role="presentation"/>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro nav_menu(class) %}
+	<nav class="nav__menu {{class}}" id="js-navigation-menu">
+		<li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-1">Для кого</a></li>
+		<li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-2">О тренинге</a></li>
+		<li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-3">Спикеры</a></li>
+		<li class="nav__menu-item"><a class="nav__menu-item-link" data-scroll="data-scroll" href="#id-3">Регистрация</a></li>
+	</nav>
+{% endmacro %}
+
+{% macro nav_addition(type,  class) %}
+	<div class="nav__addition {{class}}" id="js-nav-addition">
+		{% if type == '1' %}
+			<button  class="btn effect effect_bounce-top nav__addition-btn" data-action="modal" data-open="#modal-form">Оставить заявку</button>
+		{% elseif type == '2' %}
+			<div class="nav__addition-links js-nav-links">
+				<a class="nav__addition-link" href="tel: +1">+99 999 999 99</a>
+				<a class="nav__addition-link" href="tel: +1">+99 999 999 99</a>
+			</div>
+		{% endif %}
+		
+	</div>
+{% endmacro %}

@@ -1,0 +1,21 @@
++b('nav')
+	+e("menu")
+		
+		-webkit-overflow-scrolling: touch
+
+		+max(md)
+			
+			+fixed($nav-responsive-height, null, null, 0)
+			+size(270px, 100%)
+			padding: 30px 0 100px 0
+			overflow-y: auto
+
+			+transition
+
+			background-color: $color-responsive-menu
+			transform: translateZ(0) translateY(-120%)
+			
+			z-index: -1
+
+			+m('active')
+				transform: none

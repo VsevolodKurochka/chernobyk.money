@@ -1,0 +1,19 @@
++b('modal')
+  &__close
+    display: block
+    width: 40px
+    +absolute(0, 0)
+    background-color: transparent
+    border: none
+    outline: none
+    font-size: 40px
+    font-weight: 900
+    line-height: 1
+    z-index: z("default")
+    -webkit-tap-highlight-color: transparent
+
+    +transition
+
+    &:hover
+      color: $color-brand-1
+      transform: rotate(180deg)

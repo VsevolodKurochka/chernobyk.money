@@ -1,0 +1,34 @@
++b('modal')
+  display: flex
+  align-items: center
+  justify-content: center
+  +fixed(0, 0, 0, 0)
+  +size(100%)
+  +padding-x(15px)
+  overflow: hidden
+  z-index: z("modal")
+  backface-visibility: hidden
+  -webkit-overflow-scrolling: touch
+  outline: 0
+  background-color: rgba(46, 46, 46, 0.8)
+
+  +min(sm)
+    min-height: 460px
+
+  @extend %modalTransition
+  @extend %showing
+
+  +m('showing')
+    @extend %showing
+
+    &_in
+      overflow-y: visible
+
+      @extend %showing_in
+
+  +m('3d')
+    perspective: 1300px
+
+  &-open
+    overflow: hidden
+    padding-right: 17px

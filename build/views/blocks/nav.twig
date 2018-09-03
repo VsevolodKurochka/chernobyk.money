@@ -1,0 +1,12 @@
+{% import 'blocks/nav/macros.twig' as nav_macros %}
+<div class="fixed">
+	<div class="nav" id="js-navigation">
+		<div class="nav__container container">
+			<div class="nav__row row">
+				{{nav_macros.nav_logo('col-6 col-md-12')}}
+				{{nav_macros.nav_menu('col-12')}}
+				{{nav_macros.nav_addition('1', 'col-6')}}
+			</div>
+		</div>
+	</div>
+</div>

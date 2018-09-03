@@ -1,0 +1,23 @@
+{% import 'helpers/macros.twig' as macros %}
+{% extends 'layouts/base.twig' %}
+
+{% block meta %}
+	{% set title = 'Title' %}
+	{% set description = 'description' %}
+	{% set image = 'img/logo.png' %}
+	{% set url = 'url' %}
+	{{ macros.meta(title, description, image, url) }}
+{% endblock %}
+
+{% block css %}
+	{{ macros.css('css/style.min.css') }}
+{% endblock %}
+
+{% block js %}
+	{{ macros.js('js/libs.min.js') }}
+	{{ macros.js('js/vanilla.main.js') }}
+{% endblock %}
+
+{% block content %}
+	{% include 'pages/index/section-1.twig' %}
+{% endblock %}

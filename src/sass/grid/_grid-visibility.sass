@@ -1,0 +1,30 @@
+=visibility($visibility)
+	+b('hidden-' + $visibility)
+		display: none !important
+
+	+b('visible-' + $visibility)
+		display: block !important
+
+%visible
+	display: none !important
+
++b('hidden')
+	@extend %visible
+
+@each $br-name, $br-value in $breakpoints
+	+b('visible-' + $br-name)
+		@extend %visible
+
++min(lg)
+	+visibility(lg)
+
++min(md)
+	+max(lg)
+		+visibility(md)
+
++min(sm)
+	+max(md)
+		+visibility(sm)
+
++max(sm)
+	+visibility(xs)

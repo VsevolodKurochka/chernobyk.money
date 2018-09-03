@@ -1,0 +1,15 @@
+// Connect fonts
+=connect-font($font, $class_name: $font, $fileType: otf)
+	@font-face
+		font-family: $font
+		src: local("#{$font}"), url(../fonts/#{$font}.#{$fileType})
+
+	@if $class_name != null
+		.#{$class_name}
+			font-family: $font
+	@else
+		.#{$font}
+			font-family: $font
+
+.font-general
+	font-family: 'Roboto', sans-serif

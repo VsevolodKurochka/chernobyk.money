@@ -1,0 +1,6 @@
+{% macro video(image, src) %}
+	<div class="video">
+		<img src="{{image}}" alt="" class="video__image">
+		<button class="video__button" data-action="modal" data-open="#modal-video" data-video="{{src}}"></button>
+	</div>
+{% endmacro %}

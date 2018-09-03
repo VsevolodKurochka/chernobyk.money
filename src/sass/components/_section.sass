@@ -2,8 +2,12 @@
 	+relative()
 	+margin-y(50px)
 
-	&__title
+	&__header
 		margin-bottom: 30px
+		+min(sm)
+			margin-bottom: 45px
+
+	&__title
 		line-height: 1.1
 		text-transform: uppercase
 		font-weight: 100
@@ -12,8 +16,10 @@
 		font-size: 25px
 
 		+min(sm)
-			margin-bottom: 45px
 			font-size: 30px
 
 		+min(lg)
 			font-size: 36px
+
+	&__title + &__subtitle
+		margin-top: 10px

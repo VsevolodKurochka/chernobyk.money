@@ -1,13 +1,17 @@
 {% import 'pages/index/macros.twig' as macros %}
-<section class="happens">
+<section class="section happens">
 	<div class="container">
-		<h3 class="section__title happens__title"><strong>НО ПОЧЕМУ</strong> ТАК <br>ПРОИСХОДИТ?</h3>
-		<p class="section__subtitle">Вступая в борьбу с подсознанием, помни: <strong>ты УЖЕ проиграл</strong></p>
-		<div class="happens__row">
+		<div class="section__header">
+			<h3 class="section__title happens__title"><strong>НО ПОЧЕМУ</strong> ТАК <br>ПРОИСХОДИТ?</h3>
+			<p class="section__subtitle">Вступая в борьбу с подсознанием, помни: <strong>ты УЖЕ проиграл</strong></p>
+		</div>
+		<div class="happens__row row">
 			<div class="col-12 col-sm-8">
 				{{macros.video('img/hap-video.jpg', 'https://www.youtube.com/embed/uO8jLZX1pV4')}}
 			</div>
-			<div class="col-12 col-sm-4"></div>
+			<div class="col-12 col-sm-4">
+				<img src="img/happens-veja.png" alt="">
+			</div>
 		</div>
 	</div>
 </section>

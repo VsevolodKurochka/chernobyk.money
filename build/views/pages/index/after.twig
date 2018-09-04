@@ -2,7 +2,7 @@
 {% 
 	set items_1 = [
 		{
-			'content': 'Определишь и проработаешь внутренние психологические ограничения, программирующие тебя на бедность.'
+			'content': 'Определишь и проработаешь внутренние психологические ограничения, программирующие тебя на бедность.'
 		},
 		{
 			'content': 'Избавишься от “синдрома беспомощности” и научишься решать финансовые проблемы любой сложности.'
@@ -15,22 +15,46 @@
 		}
 	]
 %}
+{% 
+	set items_2 = [
+		{
+			'content': 'Запрограммируешь сценарий своей идеальной жизни через пирамиду Дилтса'
+		},
+		{
+			'content': 'Освоишь методику GROW — ведущий  мировой инструмент достижения целей.'
+		},
+		{
+			'content': 'Узнаешь лайфхаки по увеличению дохода от участников.'
+		},
+		{
+			'content': 'Получишь реальный результат, выполняя практические упражнения.'
+		}
+	]
+%}
 <section class="section after">
 	<div class="container">
-		<div class="row">
-			<div class="col-12 col-sm-6 col-md-5">
+		<div class="row after__row">
+			<div class="after__column-1 col-12 col-sm-6 col-md-5">
 				<div class="section__header after__header">
-					<h3 class="section__title after__title">Что ты <strong>получишь</strong><br> после тренинга</h3>
+					<h3 class="section__title">Что ты <strong>получишь</strong><br> после тренинга</h3>
 				</div>
 				<div class="row">
 					{% set i = 0 %}
 					{% for item in items_1 %}
 						{% set i = i + 1 %}
-						{{macros.number('col-12 col-sm-6', "0#{i}", item.content)}}
+						{{macros.number('col-12 col-sm-6 after__number', "0#{i}", item.content)}}
 					{% endfor %}
 				</div>
 			</div>
-			<div class="col-12 col-sm-6"></div>
+			<div class="after__column-2 col-12 col-sm-6 col-md-5">
+				<div class="row after__column-2-row">
+					{% set i = 4 %}
+					{% for item in items_2 %}
+						{% set i = i + 1 %}
+						{{macros.number('col-12 col-sm-6 col-md-5 after__number', "0#{i}", item.content)}}
+					{% endfor %}
+				</div>
+			</div>
 		</div>
 	</div>
 </section>

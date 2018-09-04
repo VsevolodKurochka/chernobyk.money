@@ -31,7 +31,7 @@
 	<div class="container problem__container">
 		<div class="row">
 			<div class="col-12 col-sm-8 col-md-10 col-lg-9 problem__content">
-				<h3 class="section__title problem__title"><strong>БОЛЬШИНСТВО ЛЮДЕЙ</strong> <br>СТАЛКИВАЕТСЯ КАК МИНИМУМ <br>С ОДНОЙ ИЗ <strong>ЭТИХ ПРОБЛЕМ</strong></h3>
+				{{macros.sectionHeader(null, "<strong>БОЛЬШИНСТВО ЛЮДЕЙ</strong> <br>СТАЛКИВАЕТСЯ КАК МИНИМУМ <br>С ОДНОЙ ИЗ <strong>ЭТИХ ПРОБЛЕМ</strong>", 'problem__title')}}
 				<div class="row problem__items">
 					{% set i = 0 %}
 					{% for item in items %}

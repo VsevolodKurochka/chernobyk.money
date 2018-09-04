@@ -11,3 +11,18 @@
 		<div class="number-item__content">{{content}}</div>
 	</div>
 {% endmacro %}
+
+{% macro modalButton(text, class) %}
+	<button class="btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top {{class}}" data-action="modal" data-open="#modal-form">{{text}}</button>
+{% endmacro %}
+
+{% macro sectionHeader(headerClass, title, titleClass, subtitle) %}
+	<div class="section__header {{headerClass}}">
+		{% if title %}
+			<h3 class="section__title {{titleClass}}">{{title|nl2br}}</h3>
+		{% endif %}
+		{% if subtitle %}
+			<p class="section__subtitle">{{subtitle|nl2br}}</p>
+		{% endif %}
+	</div>
+{% endmacro %}

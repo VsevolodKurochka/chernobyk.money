@@ -1,7 +1,10 @@
 {% import 'pages/index/macros.twig' as macros %}
-<section class="year">
+<section class="section year">
 	<div class="container">
 		<div class="row year__row">
+			<div class="col-12 col-sm-2 col-md-3">
+				<img src="img/year-question.png" alt="СКОЛЬКО ЛЕТ ТЫ ЖИВЕШЬ ПО СЦЕНАРИЮ “БЕДНЫХ”? 20 ЛЕТ? 30? 40?" class="year__image">
+			</div>
 			<div class="col-12 col-sm-10 col-md-9">
 				{{
 					macros.sectionHeader(
@@ -13,9 +16,7 @@
 				}}
 				{{macros.modalButton('Узнать стоимость')}}
 			</div>
-			<div class="col-12 col-sm-2 col-md-3">
-				<img src="img/year-question.png" alt="">
-			</div>
+			
 		</div>
 	</div>
 </section>

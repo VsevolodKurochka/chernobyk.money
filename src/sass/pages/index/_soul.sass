@@ -1,0 +1,30 @@
+.soul
+
+	&__header
+		+relative()
+
+	&__title
+		+min(lg)
+			font-size: 110px
+
+	&__subtitle
+		+min(md)
+			margin-top: 0
+			+absolute(-10px, 20%)
+			max-width: 40%
+
+			+font('l')
+			text-transform: uppercase
+			font-size: 21px
+
+	&__subheader
+		+min(sm)
+			align-items: center
+		&-title
+			line-height: 1.2
+			font-size: 20px
+			margin-bottom: 15px
+			+font('l')
+
+			+min(md)
+				font-size: 26px

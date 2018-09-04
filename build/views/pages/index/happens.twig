@@ -1,10 +1,7 @@
 {% import 'pages/index/macros.twig' as macros %}
 <section class="section happens">
 	<div class="container">
-		<div class="section__header">
-			<h3 class="section__title happens__title"><strong>НО ПОЧЕМУ</strong> ТАК <br>ПРОИСХОДИТ?</h3>
-			<p class="section__subtitle">Вступая в борьбу с подсознанием, помни: <strong>ты УЖЕ проиграл</strong></p>
-		</div>
+		{{macros.sectionHeader(null, "<strong>НО ПОЧЕМУ</strong> ТАК <br>ПРОИСХОДИТ?", "happens__title", "Вступая в борьбу с подсознанием, помни: <strong>ты УЖЕ проиграл</strong>")}}
 		<div class="happens__row row">
 			<div class="col-12 col-sm-8">
 				{{macros.video('img/hap-video.jpg', 'https://www.youtube.com/embed/uO8jLZX1pV4')}}
@@ -14,7 +11,7 @@
 			</div>
 		</div>
 		<div class="happens__footer">
-			<button class="btn btn_lg btn_brand-1 btn_shadow effect effect_bounce-top" data-action="modal" data-open="#modal-form">Включить программу “Увеличение дохода”</button>
+			{{macros.modalButton('Включить программу “Увеличение дохода”')}}
 		</div>
 	</div>
 </section>

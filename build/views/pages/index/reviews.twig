@@ -1,0 +1,23 @@
+{% import 'pages/index/macros.twig' as macros %}
+{% 
+	set items = [
+		{
+			'video': 'gHk4qIgB9c4'
+		},
+		{
+			'video': 'gHk4qIgB9c4'
+		}
+	]
+%}
+<section class="reviews">
+	<div class="container">
+		{{macros.sectionHeader(null, "<strong>Отзывы</strong><br> учеников", "reviews__title")}}
+		<div class="owl-carousel reviews__carousel" id="reviews-carousel">
+			{% for item in items %}
+				<div class="reviews__carousel-item">
+					<iframe src="https://www.youtube.com/embed/{{item.video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="reviews__carousel-item-video"></iframe>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

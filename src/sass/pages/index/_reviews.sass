@@ -1,0 +1,13 @@
+.reviews
+	+padding-y(45px)
+	+bg('../img/review-bg.jpg', 0 center)
+	color: $color-white
+	+min(sm)
+		+padding-y(70px)
+	+min(lg)
+		@media only screen
+			background-attachment: fixed
+
+	&__title
+		+min(md)
+			font-size: 60px

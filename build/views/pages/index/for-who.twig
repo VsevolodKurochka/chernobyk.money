@@ -1,8 +1,7 @@
+{% import 'pages/index/macros.twig' as macros %}
 <section class="section for-who">
 	<div class="container">
-		<div class="section__header">
-			<h3 class="section__title for-who__title">Для кого?</h3>
-		</div>
+		{{macros.sectionHeader(null, "Для кого?", 'for-who__title')}}
 		<div class="for-who__content">
 			<div class="for-who__step row">
 				<div class="col-12 col-sm-4">

@@ -4,3 +4,10 @@
 		<button class="video__button" data-action="modal" data-open="#modal-video" data-video="{{src}}"></button>
 	</div>
 {% endmacro %}
+
+{% macro number(class, number, content) %}
+	<div class="{{class}} number-item">
+		<p class="number-item__number">{{number}}</p>
+		<div class="number-item__content">{{content}}</div>
+	</div>
+{% endmacro %}

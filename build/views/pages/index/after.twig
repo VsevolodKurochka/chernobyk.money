@@ -35,9 +35,7 @@
 	<div class="container">
 		<div class="row after__row">
 			<div class="after__column-1 col-12 col-sm-6 col-md-5">
-				<div class="section__header after__header">
-					<h3 class="section__title">Что ты <strong>получишь</strong><br> после тренинга</h3>
-				</div>
+				{{macros.sectionHeader('after__header', "Что ты <strong>получишь</strong><br> после тренинга")}}
 				<div class="row">
 					{% set i = 0 %}
 					{% for item in items_1 %}

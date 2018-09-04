@@ -19,10 +19,10 @@
 {% macro sectionHeader(headerClass, title, titleClass, subtitle) %}
 	<div class="section__header {{headerClass}}">
 		{% if title %}
-			<h3 class="section__title {{titleClass}}">{{title|nl2br}}</h3>
+			<h3 class="section__title {{titleClass}}">{{title|raw}}</h3>
 		{% endif %}
 		{% if subtitle %}
-			<p class="section__subtitle">{{subtitle|nl2br}}</p>
+			<p class="section__subtitle">{{subtitle|raw}}</p>
 		{% endif %}
 	</div>
 {% endmacro %}

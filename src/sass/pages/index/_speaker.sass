@@ -1,0 +1,50 @@
+.speaker
+	+padding-y(45px)
+	+bg('../img/speaker-bg.jpg', 0 center)
+	+min(sm)
+		+padding-y(70px)
+	+min(lg)
+		@media only screen
+			background-attachment: fixed
+
+	&__title
+		color: $color-white
+
+		+min(lg)
+			font-size: 50px
+
+	&__row
+		+min(sm)
+			justify-content: center
+
+	&__item
+		font-size: 0
+		&-inner
+			background-color: #fefefe
+			+min(sm)
+				display: flex
+				justify-content: center
+				align-items: center
+				height: 100%
+
+		&-content
+			+min(sm)
+				width: 80%
+
+		&-name
+			+font('b')
+			font-size: 20px
+			margin-bottom: 15px
+
+			+min(md)
+				font-size: 25px
+
+			+min(lg)
+				font-size: 30px
+
+		&-list
+			font-size: 14px
+			list-style: none
+			li
+				&:not(:last-child)
+					margin-bottom: 10px

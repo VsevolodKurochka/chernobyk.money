@@ -86,11 +86,63 @@
 	&__place
 		font-size: 14px
 
+	&__bubble
+		@keyframes bubbleMove
+			0%,100%
+				transform: none
+			50%
+				transform: translateY(45px)
+
+		+size(60px)
+		+absolute()
+		border-radius: 100%
+		background-image: linear-gradient( 90deg, rgb(153,230,247) 0%, rgb(12,26,49) 100%)
+		opacity: 0.25
+		animation: bubbleMove 10s linear 0s infinite alternate
+		z-index: 4
+
+		+min(sm)
+			+size(100px)
+
+		+min(lg)
+			+size(140px)
+
+		&_1
+			top: -15px
+			left: -15px
+			animation-delay: 1s
+
+		&_2
+			bottom: 5%
+			left: 5%
+			animation-delay: 4s
+			+min(sm)
+				+size(100px)
+
+		&_3
+			right: 5%
+			bottom: 5%
+			animation-delay: -5s
+			
+
+		&_4
+			left: 55%
+			top: 0%
+			animation-delay: 0s
+
+		&_5
+			left: 50%
+			bottom: 5%
+			animation-delay: 2s
+			+min(sm)
+				+size(90px)
+		
+
 	&__bg
 		@keyframes greetingBg
 			100%
 				transform: none
-		animation: greetingBg 5s linear 0s 1 forwards
+		animation: greetingBg 20s linear 0s 1 forwards
 		+max(sm)
 			max-width: 250px
 		+min(sm)
@@ -98,14 +150,13 @@
 			width: 65%
 
 		+min(md)
-			right: -250px
+			right: -200px
 			transform: translateX(90%)
 			width: auto
 
-	&__column
-		&-image
-			+max(sm)
-				text-align: right
+	&__column-image
+		+max(sm)
+			text-align: right
 
 	&__dollar
 		display: none
@@ -117,7 +168,7 @@
 				0%,100%
 					transform: none
 				50%
-					transform: translateY(30px)
+					transform: translateY(45px)
 
 			&_1
 				right: 290px

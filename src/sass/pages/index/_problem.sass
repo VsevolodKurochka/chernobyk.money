@@ -5,6 +5,10 @@
 	color: $color-white
 	z-index: 1
 
+	+min(lg)
+		@media only screen
+			background-attachment: fixed
+
 	&:before
 		content: ""
 		+absolute(0, null, null, 0)

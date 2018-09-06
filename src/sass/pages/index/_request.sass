@@ -1,0 +1,24 @@
+.request
+
+	&__header
+		+min(md)
+			max-width: 75%
+
+	&__title
+		+min(md)
+			font-size: 45px
+
+	&__row
+		+min(sm)
+			justify-content: center
+
+	&__item
+		&-inner
+			+relative()
+			+min(sm)
+				height: 100%
+		&-image
+			+absolute(0, 0)
+			+size(100%)
+			object-fit: cover
+			z-index: -1

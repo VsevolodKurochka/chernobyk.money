@@ -87,34 +87,60 @@
 		font-size: 14px
 
 	&__bg
+		@keyframes greetingBg
+			100%
+				transform: none
+		animation: greetingBg 5s linear 0s 1 forwards
+		+max(sm)
+			max-width: 250px
 		+min(sm)
 			+absolute(0, 0)
 			width: 65%
 
 		+min(md)
-			right: -150px
+			right: -250px
+			transform: translateX(90%)
 			width: auto
 
+	&__column
+		&-image
+			+max(sm)
+				text-align: right
+
 	&__dollar
+		display: none
 		+min(sm)
+			display: inline-block
 			position: absolute
+
+			@keyframes dollarMove
+				0%,100%
+					transform: none
+				50%
+					transform: translateY(30px)
 
 			&_1
 				right: 290px
 				bottom: 75px
 				transform: rotate(-30deg)
 				max-width: 200px
+				img
+					animation: dollarMove 20s linear 0s infinite alternate
 
 			&_2
 				right: 170px
 				bottom: 75px
 				transform: rotate(70deg)
 				max-width: 250px
+				img
+					animation: dollarMove 15s cubic-bezier(0.4, 0, 1, 1) 5s infinite alternate
 
 			&_3
 				right: 135px
 				bottom: -5px
 				max-width: 300px
+				img
+					animation: dollarMove 30s linear -5s infinite alternate
 				
 		+min(md)
 			&_1

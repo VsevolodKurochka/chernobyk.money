@@ -1,17 +1,23 @@
 {% import 'pages/index/macros.twig' as macros %}
+
+{% set title = "<strong>НО ПОЧЕМУ</strong> ТАК <br>ПРОИСХОДИТ?" %}
+{% set subtitle = "Вступая в борьбу с подсознанием, помни: <strong>ты УЖЕ проиграл</strong>" %}
+{% set buttonText = "Включить программу “Увеличение дохода”" %}
+{% set video = "C-mrGVSo_1E" %}
+
 <section class="section happens">
 	<div class="container">
-		{{macros.sectionHeader(null, "<strong>НО ПОЧЕМУ</strong> ТАК <br>ПРОИСХОДИТ?", "happens__title", "Вступая в борьбу с подсознанием, помни: <strong>ты УЖЕ проиграл</strong>")}}
+		{{macros.sectionHeader(null, title, "happens__title", subtitle)}}
 		<div class="happens__row row">
 			<div class="col-12 col-sm-8">
-				{{macros.video('img/hap-video.jpg', 'https://www.youtube.com/embed/uO8jLZX1pV4')}}
+				{{macros.video('img/hap-video.jpg', "#{video}")}}
 			</div>
 			<div class="col-12 col-sm-4">
 				<img src="img/happens-veja.jpg" alt="">
 			</div>
 		</div>
 		<div class="happens__footer">
-			{{macros.modalButton('Включить программу “Увеличение дохода”')}}
+			{{macros.modalButton(buttonText)}}
 		</div>
 	</div>
 </section>

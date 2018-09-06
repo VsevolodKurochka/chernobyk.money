@@ -13,12 +13,43 @@
 			justify-content: center
 
 	&__item
+		+max(sm)
+			+offset()
 		&-inner
+			padding: 30px 15px
 			+relative()
+			color: $color-white
 			+min(sm)
+				padding: 45px 30px
 				height: 100%
 		&-image
 			+absolute(0, 0)
 			+size(100%)
 			object-fit: cover
 			z-index: -1
+
+		&-title
+			margin-bottom: 15px
+			text-transform: uppercase
+			line-height: 1.1
+			font-size: 30px
+
+			+min(md)
+				margin-bottom: 30px
+				font-size: 40px
+
+			+min(lg)
+				font-size: 48px
+
+		&-list
+			margin-bottom: 30px
+			+min(md)
+				margin-bottom: 45px
+				font-size: 18px
+
+			li
+				padding-left: 30px
+				+offset(10px)
+				&:after
+					content: "+"
+					+absolute(0, null, null, 0)

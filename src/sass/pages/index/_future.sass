@@ -1,10 +1,13 @@
 .future
 	+relative()
-	+bg('../img/future-bg.jpg')
+	z-index: 1
 	height: 100vh
+	
 	display: flex
 	align-items: center
 	justify-content: center
+
+	+bg('../img/future-bg.jpg')
 	color: $color-white
 
 	+min(lg)
@@ -20,5 +23,6 @@
 		z-index: -1
 
 	&__title
+		font-weight: 100
 		+min(md)
 			font-size: 48px

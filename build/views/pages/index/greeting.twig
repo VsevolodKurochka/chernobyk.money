@@ -1,21 +1,29 @@
 {% import 'pages/index/macros.twig' as macros %}
+{% set bubbleItems = 5 %}
+{%
+	set info = {
+		"title": "ДЕНЕЖНОЕ<br>МЫШЛЕНИЕ",
+		"subtitle": "Двухдневный тренинг от тренеров компании <br>“Бизнес-Молодость” и лидеров Katana Group",
+		"motivation": "Запрограммируй себя на <br>приумножение дохода",
+		"button": "Оставить заявку",
+		"place": "15 сентрября, Москва, ул. Красного,<br> гостиница “Ангара”",
+	}
+%}
 <section class="greeting">
-	<div class="greeting__bubble greeting__bubble_1"></div>
-	<div class="greeting__bubble greeting__bubble_2"></div>
-	<div class="greeting__bubble greeting__bubble_3"></div>
-	<div class="greeting__bubble greeting__bubble_4"></div>
-	<div class="greeting__bubble greeting__bubble_5"></div>
+	{% for i in 1..bubbleItems %}
+	  <div class="greeting__bubble greeting__bubble_{{i}}"></div>
+	{% endfor %}
 	<div class="container greeting__container">
 		<div class="row">
 			<div class="col-12 col-md-5 col-lg-4 greeting__content">
-				<h2 class="greeting__subtitle">Двухдневный тренинг от тренеров компании <br>“Бизнес-Молодость” и лидеров Katana Group</h2>
-				<h1 class="greeting__title">ДЕНЕЖНОЕ<br>МЫШЛЕНИЕ</h1>
-				<p class="greeting__motivation">Запрограммируй себя на <br>приумножение дохода</p>
-				{{macros.modalButton('Оставить заявку', 'greeting__btn')}}
-				<p class="greeting__place">15 сентрября, Москва, ул. Красного,<br> гостиница “Ангара”</p>
+				<h2 class="greeting__subtitle">{{info.subtitle|raw}}</h2>
+				<h1 class="greeting__title">{{info.title|raw}}</h1>
+				<p class="greeting__motivation">{{info.motivation|raw}}</p>
+				{{macros.modalButton(info.button, 'greeting__btn')}}
+				<p class="greeting__place">{{info.place|raw}}</p>
 			</div>
 			<div class="greeting__column-image col-12 col-md-7 col-lg-8">
-				<img src="img/greeting-bg.jpg" alt="Двухдневный тренинг от тренеров компании “Бизнес-Молодость”" class="greeting__bg">
+				<img src="img/greeting-bg.jpg" alt="{{info.subtitle|striptags}}”" class="greeting__bg">
 				<div class="greeting__dollar greeting__dollar_1"><img src="img/dollar-large.png"></div>
 				<div class="greeting__dollar greeting__dollar_2"><img src="img/dollar-large.png"></div>
 				<div class="greeting__dollar greeting__dollar_3"><img src="img/dollar-large.png"></div>

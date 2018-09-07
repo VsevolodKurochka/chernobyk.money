@@ -149,9 +149,11 @@
 
 	&__bg
 		@keyframes greetingBg
+			50%
+				transform: translateY(-45px)
 			100%
 				transform: none
-		animation: greetingBg 20s linear 0s 1 forwards
+		animation: greetingBg 10s linear 0s 1 forwards
 		+max(sm)
 			max-width: 250px
 		+min(sm)

@@ -1,4 +1,5 @@
 {% import 'pages/index/macros.twig' as macros %}
+{% set title = "ОТВЕТЫ НА ПОПУЛЯРНЫЕ<br><strong>ВОПРОСЫ</strong>" %}
 {%
 	set items = [
 		{
@@ -27,7 +28,7 @@
 				{{
 					macros.sectionHeader(
 						'question__header',
-						"ОТВЕТЫ НА ПОПУЛЯРНЫЕ<br><strong>ВОПРОСЫ</strong>",
+						title,
 						"question__title"
 					)
 				}}

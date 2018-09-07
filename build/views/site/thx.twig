@@ -2,8 +2,8 @@
 {% extends 'layouts/base.twig' %}
 
 {% block meta %}
-	{% set title = 'Денежное мышление' %}
-	{% set description = 'Двухдневный тренинг от тренеров компании “Бизнес-Молодость” и лидеров Katana Group' %}
+	{% set title = 'Спасибо за регистрацию на двухдневном тренинге “ДЕНЕЖНОЕ МЫШЛЕНИЕ”!' %}
+	{% set description = '10% нашей жизни состоит из того, что с нами случается, и на 90% — как мы на это реагируем.' %}
 	{% set image = 'img/speaker.jpg' %}
 	{% set url = 'url' %}
 	{{ macros.meta(title, description, image, url) }}
@@ -19,18 +19,21 @@
 	{{ macros.js('js/jquery.main.js') }}
 {% endblock %}
 
+{% block nav %}
+{% endblock %}
+
 {% block content %}
-	{% include 'pages/index/greeting.twig' %}
-	{% include 'pages/index/problem.twig' %}
-	{% include 'pages/index/happens.twig' %}
-	{% include 'pages/index/result.twig' %}
-	{% include 'pages/index/for-who.twig' %}
-	{% include 'pages/index/after.twig' %}
-	{% include 'pages/index/year.twig' %}
-	{% include 'pages/index/programm.twig' %}
-	{% include 'pages/index/speaker.twig' %}
-	{% include 'pages/index/soul.twig' %}
-	{% include 'pages/index/reviews.twig' %}
-	{% include 'pages/index/request.twig' %}
-	{% include 'pages/index/future.twig' %}
+	{% include 'pages/thx/greeting.twig' %}
+	{% include 'pages/thx/problem.twig' %}
+	{% include 'pages/thx/happens.twig' %}
+	{% include 'pages/thx/result.twig' %}
+	{% include 'pages/thx/for-who.twig' %}
+	{% include 'pages/thx/after.twig' %}
+	{% include 'pages/thx/year.twig' %}
+	{% include 'pages/thx/programm.twig' %}
+	{% include 'pages/thx/speaker.twig' %}
+	{% include 'pages/thx/soul.twig' %}
+	{% include 'pages/thx/reviews.twig' %}
+	{% include 'pages/thx/request.twig' %}
+	{% include 'pages/thx/future.twig' %}
 {% endblock %}

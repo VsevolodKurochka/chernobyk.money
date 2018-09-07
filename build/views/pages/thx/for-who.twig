@@ -1,0 +1,38 @@
+{% import 'pages/index/macros.twig' as macros %}
+<section class="section for-who">
+	<div class="container">
+		{{macros.sectionHeader(null, "Для кого?", 'for-who__title')}}
+		<div class="for-who__content">
+			<div class="for-who__step row">
+				<div class="col-12 col-sm-4">
+					<img src="img/for-who-1.png" alt="Для предпринимателей" class="for-who__step-image">
+				</div>
+				<div class="col-12 col-sm-8 col-lg-7">
+					<p class="for-who__step-title">Для предпринимателей</p>
+					<div class="for-who__step-content">
+						<p>которые уперлись в потолок и не могут выйти на новый уровень дохода. Их тормозят вредные привычки, сомнительные друзья, неуверенность и еще что-то, чего они не могут понять.</p>
+						<p>Все попытки зарабатывать больше — проваливаются.</p>
+					</div>
+					<div class="for-who__step-footer">
+						<button class="for-who__step-btn" data-action="modal" data-open="#modal-form">Я предприниматель</button>
+					</div>
+				</div>
+			</div>
+			<div class="for-who__step row">
+				<div class="col-12 col-sm-4">
+					<img src="img/for-who-2.png" alt="Для фрилансеров" class="for-who__step-image">
+				</div>
+				<div class="col-12 col-sm-8 col-lg-7">
+					<p class="for-who__step-title">Для фрилансеров</p>
+					<div class="for-who__step-content">
+						<p>не желающих повторить судьбу своих родителей.</p>
+						<p>Они хотят стать авторами жизни, купить жилье (не в ипотеку), авто (не в кредит), ездить на отдых и даже не задумываться над тем, хватит им на это денег или нет.</p>
+					</div>
+					<div class="for-who__step-footer">
+						<button class="for-who__step-btn" data-action="modal" data-open="#modal-form">Я фрилансер</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

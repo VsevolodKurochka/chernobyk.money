@@ -1,0 +1,56 @@
+{% import 'pages/index/macros.twig' as macros %}
+{%
+	set items = [
+		{
+			'title': "Пакет <br>Gold",
+			'image': 'img/request-1.jpg',
+			'list': [
+				"Сектор мест GOLD",
+				"Полная программа обучения ",
+				"Практические задания",
+				"Доступ в закрытый чат Telegram"
+			],
+			'button': 'Узнать цену Gold'
+		},
+		{
+			'title': "Пакет <br>Platinum",
+			'image': 'img/request-2.jpg',
+			'list': [
+				"Сектор мест PLATINUM",
+				"Полная программа обучения",
+				"Практические задания",
+				"Доступ в закрытый чат Telegram",
+				"2 ОБЕДА СО СПИКЕРАМИ С PLATINUM УЧАСТНИКАМИ",
+				"Футболка Katana Group"
+			],
+			'button': 'Узнать цену Platinum'
+		},
+	]
+%}
+<section class="section request">
+	<div class="container">
+		{{
+			macros.sectionHeader(
+				'request__header', 
+				"<strong>Оставляй заявку</strong> — и ты удивишься тому, на что способно <strong>твоё мышление</strong>", 
+				"request__title"
+			)
+		}}
+		<div class="row request__row">
+			{% for item in items %}
+				<div class="col-12 col-sm-6 col-md-5 request__item">
+					<div class="request__item-inner">
+						<img src="{{item.image}}" alt="{{item.title|striptags}}" class="request__item-image">
+						<p class="request__item-title">{{item.title|raw}}</p>
+						<ul class="list request__item-list">
+							{% for li in item.list %}
+								<li>{{li}}</li>
+							{% endfor %}
+						</ul>
+						{{macros.modalButton(item.button)}}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

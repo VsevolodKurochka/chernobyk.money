@@ -27,6 +27,18 @@
 	</div>
 {% endmacro %}
 
+{% macro formControl(id, name, text, checked) %}
+	<label class="control control_white" for="{{id}}">
+		{% if checked %}
+			<input type="radio" id="{{id}}" name="{{name}}" checked="{{checked}}" />
+		{% else %}
+			<input type="radio" id="{{id}}" name="{{name}}"/>
+		{% endif %}
+		<div class="control__indicator"></div>
+		<p class="control__text">{{text}}</p>
+	</label>
+{% endmacro %}
+
 {% macro formRowInput(type, name, placeholder, image) %}
 	<div class="form__row form__row_line">
 		<img src="{{image}}" alt="Image for {{name}} input" class="form__image">

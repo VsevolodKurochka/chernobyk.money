@@ -14,16 +14,8 @@
 				<form action="#" class="form form_white form_block" method="POST">
 					<div class="form__content">
 						<div class="form__row">
-						  <label class="control control_white" for="check1">
-						    <input type="radio" id="check1" name="checks" checked="checked" />
-						    <div class="control__indicator"></div>
-						    <p class="control__text">Пакет Gold - XXXX грн</p>
-						  </label>
-						  <label class="control control_white" for="check2">
-						    <input type="radio" id="check2" name="checks"/>
-						    <div class="control__indicator"></div>
-						    <p class="control__text">Пакет Platinum - XXXX грн</p>
-						  </label>
+							{{macros.formControl('check1', 'checks', 'Пакет Gold - XXXX грн', 'checked')}}
+							{{macros.formControl('check2', 'checks', 'Пакет Platinum - XXXX грн', '')}}
 						</div>
 						{{macros.formRowInput('text', 'name', 'Имя', 'img/icon-avatar.png')}}
 						{{macros.formRowInput('email', 'email', 'Email', 'img/icon-email.png')}}

@@ -26,3 +26,10 @@
 		{% endif %}
 	</div>
 {% endmacro %}
+
+{% macro formRow(type, name, placeholder) %}
+	<div class="form__row form__row_line">
+		<input type="{{type}}" class="form__control" name="{{name}}" placeholder="{{placeholder}}">
+		<span class="form__line"></span>
+	</div>
+{% endmacro %}

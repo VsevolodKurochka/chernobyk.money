@@ -1,8 +1,27 @@
+{% import 'pages/index/macros.twig' as macros %}
+
+{% set title = "<strong>Приходи</strong> — и включи программу <strong>“Увеличение дохода”</strong>" %}
+{% set subtitle = "<strong>для участия</strong> Заполните ваши данные и нажмите на <strong>кнопку “оплатить заказ”</strong>" %}
+
 <section class="welcome">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 col-sm-6 col-md-6"></div>
-			<div class="col-12 col-sm-6 col-md-4"></div>
+			<div class="col-12 col-sm-6 col-md-6">
+				{{macros.sectionHeader('welcome__header', title, "welcome__title", subtitle, 'welcome__subtitle')}}
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-12 col-sm-6 col-md-4">
+				<form action="#" class="form form_white form_block" method="POST">
+					<div class="form__content">
+						{{macros.formRow('text', 'name', 'Имя')}}
+						{{macros.formRow('email', 'email', 'Email')}}
+						{{macros.formRow('phone', 'phone', 'Телефон')}}
+						<div class="form__row form__row_submit">
+							<button class="form__submit btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top" type="submit">Оплатить ЗАКАЗ</button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </section>

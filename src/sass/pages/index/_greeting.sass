@@ -36,6 +36,10 @@
 		+min(lg)
 			+padding-y(120px)
 
+		&_thx
+			+min(md)
+				+padding-y(150px, 180px)
+
 	&__content
 		+relative()
 		z-index: 2
@@ -206,3 +210,44 @@
 				right: 110px
 				bottom: -55px
 				max-width: 460px
+
+
+
+	&__thx
+		@at-root
+			%greeting-thx-offset
+				margin-bottom: 30px
+				+min(md)
+					margin-bottom: 45px
+		&-title
+			@extend %greeting-thx-offset
+			font-size: 20px
+			line-height: 1.1
+			
+			+min(md)
+				font-size: 25px
+
+			+min(lg)
+				font-size: 30px
+
+		&-subtitle
+			@extend %greeting-thx-offset
+			font-size: 18px
+
+			+min(md)
+				font-size: 23px
+
+			+min(lg)
+				font-size: 26px
+
+		&-action
+			+min(sm)
+				display: flex
+				align-items: center
+
+		&-btn
+			text-align: center
+
+		&-motivation
+			+min(sm)
+				margin-right: 15px

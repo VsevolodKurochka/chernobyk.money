@@ -3,7 +3,7 @@
 {%
 	set info = {
 		"title": "Спасибо за регистрацию на двухдневном тренинге “ДЕНЕЖНОЕ МЫШЛЕНИЕ”!",
-		"subtitle": "10% нашей жизни состоит из того, что с нами случается, и на 90% — как мы на это реагируем.",
+		"subtitle": "10% нашей жизни состоит из того,<br>что с нами случается, и на 90% —<br> как мы на это реагируем.",
 		"button": "Оплатить участие сейчас<br>и получи бонус*",
 		"motivation": "Усовершенствуй мышление —<br>и запрограммируй себя на<br>приумножение дохода",
 	}
@@ -12,14 +12,14 @@
 	{% for i in 1..bubbleItems %}
 	  <div class="greeting__bubble greeting__bubble_{{i}}"></div>
 	{% endfor %}
-	<div class="container greeting__container">
+	<div class="container greeting__container greeting__container_thx">
 		<div class="row">
 			<div class="col-12 col-md-5 col-lg-7 greeting__content">
 				<h1 class="greeting__thx-title">{{info.title|raw}}</h1>
 				<p class="greeting__thx-subtitle">{{info.subtitle|raw}}</p>
 				<div class="greeting__thx-action">
 					<p class="greeting__thx-motivation">{{info.motivation|raw}}</p>
-					<a href="#section-payment" class="anchor btn btn_shadow btn_brand-1 effect effect_bounce-top">{{info.button|raw}}</a>
+					<a href="#section-payment" class="anchor btn btn_shadow btn_brand-1 effect effect_bounce-top greeting__thx-btn">{{info.button|raw}}</a>
 				</div>
 			</div>
 			<div class="greeting__column-image col-12 col-md-7 col-lg-4">

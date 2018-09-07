@@ -3,6 +3,8 @@
 	+bg('../img/speaker-bg.jpg', 0 center)
 	+min(sm)
 		+padding-y(70px)
+		&_thx
+			padding-bottom: 160px
 	+min(lg)
 		@media only screen
 			background-attachment: fixed
@@ -25,7 +27,7 @@
 				display: flex
 				justify-content: center
 				align-items: center
-				height: 100%
+				min-height: 100%
 
 		&-content
 			+max(sm)
@@ -50,3 +52,25 @@
 			li
 				&:not(:last-child)
 					margin-bottom: 10px
+
+		&-warning
+			margin-top: 15px
+			font-size: 21px
+			color: $color-white
+
+			+min(md)
+				margin-top: 45px
+				font-size: 24px
+
+	&__thx
+		&-header
+			color: $color-white
+			+min(md)
+				display: flex
+				align-items: center
+				justify-content: space-around
+
+		&-subtitle
+			text-transform: uppercase
+			+min(md)
+				max-width: 425px

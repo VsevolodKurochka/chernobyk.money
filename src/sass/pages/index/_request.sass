@@ -44,7 +44,6 @@
 		&-list
 			margin-bottom: 30px
 			+min(md)
-				margin-bottom: 45px
 				font-size: 18px
 
 			li
@@ -53,3 +52,20 @@
 				&:after
 					content: "+"
 					+absolute(0, null, null, 0)
+
+			.last
+				display: block
+				margin-top: 30px
+				text-transform: uppercase
+
+				+min(md)
+					margin-top: 45px
+
+			.crossed
+				color: #ababab
+				text-decoration: line-through
+
+		&-price
+			margin-bottom: 30px
+			+min(sm)
+				font-size: 19px

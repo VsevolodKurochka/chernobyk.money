@@ -8,9 +8,12 @@
 				"Сектор мест GOLD",
 				"Полная программа обучения ",
 				"Практические задания",
-				"Доступ в закрытый чат Telegram"
+				"Доступ в закрытый чат Telegram",
+				"<span class='last crossed'>Личная консультация спикера (1 час)</span>"
 			],
-			'button': 'Узнать цену Gold'
+			'price': 'ХХХХ ГРН',
+			'link_href': '#',
+			'link_text': 'Оплатить Gold',
 		},
 		{
 			'title': "Пакет <br>Platinum",
@@ -20,10 +23,11 @@
 				"Полная программа обучения",
 				"Практические задания",
 				"Доступ в закрытый чат Telegram",
-				"2 ОБЕДА СО СПИКЕРАМИ С PLATINUM УЧАСТНИКАМИ",
-				"Футболка Katana Group"
+				"<span class='last'>Личная консультация спикера (1 час)</span>"
 			],
-			'button': 'Узнать цену Platinum'
+			'price': 'ХХХХ ГРН',
+			'link_href': '#',
+			'link_text': 'Оплатить Platinum',
 		},
 	]
 %}
@@ -32,7 +36,7 @@
 		{{
 			macros.sectionHeader(
 				'request__header', 
-				"<strong>Оставляй заявку</strong> — и ты удивишься тому, на что способно <strong>твоё мышление</strong>", 
+				"<strong>ВЫБЕРИ</strong> свой <br> пакет участия", 
 				"request__title"
 			)
 		}}
@@ -44,10 +48,11 @@
 						<p class="request__item-title">{{item.title|raw}}</p>
 						<ul class="list request__item-list">
 							{% for li in item.list %}
-								<li>{{li}}</li>
+								<li>{{li|raw}}</li>
 							{% endfor %}
 						</ul>
-						{{macros.modalButton(item.button)}}
+						<p class="request__item-price">{{item.price}}</p>
+						<a href="{{item.link_href}}" class="anchor btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top">{{item.link_text|raw}}</a>
 					</div>
 				</div>
 			{% endfor %}

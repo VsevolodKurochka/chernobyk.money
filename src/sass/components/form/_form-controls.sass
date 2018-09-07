@@ -2,9 +2,11 @@
   transition: all ease 0.3s
 
 .control
+  display: block
   position: relative
   user-select: none
   cursor: pointer
+  +offset(15px)
 
   &-group
     position: relative
@@ -74,14 +76,14 @@
     &:before
       transform: rotate(45deg) scale(1)
 
-  &_default input[type="radio"] + &__indicator
-    border-color: $color-brand-1
+  &_white input[type="radio"] + &__indicator
+    border-color: $color-white
 
     &:before
-      background-color: $color-brand-1
+      background-color: $color-white
 
-  &_default input[type="checkbox"] + &__indicator
-    border-color: $color-brand-1
+  &_white input[type="checkbox"] + &__indicator
+    border-color: $color-white
 
     &:before
-      border-color: $color-brand-1
+      border-color: $color-white

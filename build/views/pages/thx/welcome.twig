@@ -13,12 +13,23 @@
 			<div class="col-12 col-sm-6 col-md-4">
 				<form action="#" class="form form_white form_block" method="POST">
 					<div class="form__content">
-						{{macros.formRow('text', 'name', 'Имя')}}
-						{{macros.formRow('email', 'email', 'Email')}}
-						{{macros.formRow('phone', 'phone', 'Телефон')}}
-						<div class="form__row form__row_submit">
-							<button class="form__submit btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top" type="submit">Оплатить ЗАКАЗ</button>
+						<div class="form__row">
+						  <label class="control control_white" for="check1">
+						    <input type="radio" id="check1" name="checks" checked="checked" />
+						    <div class="control__indicator"></div>
+						    <p class="control__text">Пакет Gold - XXXX грн</p>
+						  </label>
+						  <label class="control control_white" for="check2">
+						    <input type="radio" id="check2" name="checks"/>
+						    <div class="control__indicator"></div>
+						    <p class="control__text">Пакет Platinum - XXXX грн</p>
+						  </label>
 						</div>
+						{{macros.formRowInput('text', 'name', 'Имя', 'img/icon-avatar.png')}}
+						{{macros.formRowInput('email', 'email', 'Email', 'img/icon-email.png')}}
+						{{macros.formRowInput('phone', 'phone', 'Телефон', 'img/icon-phone.png')}}
+
+						{{macros.formRowSubmit('Оплатить ЗАКАЗ')}}
 					</div>
 				</form>
 			</div>

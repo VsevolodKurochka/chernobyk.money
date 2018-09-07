@@ -5,6 +5,7 @@
 
 	&__row
 		+relative()
+		z-index: 1
 
 	&_block &__row
 		margin-bottom: 15px
@@ -32,16 +33,23 @@
 
 	@if $themeFormDesign == "new"
 		&__control
-			+input-default
+			+input-default()
+			+font('l')
+			padding: 15px 45px
 			background-color: transparent
 			border: none
+
+		&__image
+			+absolute(50%, null, null, 5px)
+			transform: translateY(-50%)
+			z-index: -1
 
 		&__line
 			position: absolute
 			left: 0
 			bottom: 0
 
-			+size(0, 1px)
+			+size(0, 2px)
 
 			background-color: $color-brand-1
 
@@ -56,7 +64,7 @@
 
 				left: 0
 				bottom: 0
-				height: 1px
+				height: 2px
 				width: 100%
 				background-color: transparentize($color-black, 0.8)
 

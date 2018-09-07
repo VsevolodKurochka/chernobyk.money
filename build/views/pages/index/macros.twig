@@ -27,9 +27,16 @@
 	</div>
 {% endmacro %}
 
-{% macro formRow(type, name, placeholder) %}
+{% macro formRowInput(type, name, placeholder, image) %}
 	<div class="form__row form__row_line">
+		<img src="{{image}}" alt="Image for {{name}} input" class="form__image">
 		<input type="{{type}}" class="form__control" name="{{name}}" placeholder="{{placeholder}}">
 		<span class="form__line"></span>
+	</div>
+{% endmacro %}
+
+{% macro formRowSubmit(text) %}
+	<div class="form__row form__row_submit">
+		<button class="form__submit btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top" type="submit">{{text}}</button>
 	</div>
 {% endmacro %}

@@ -1,0 +1,36 @@
+{% import 'helpers/macros.twig' as macros %}
+{% extends 'layouts/base.twig' %}
+
+{% block meta %}
+	{% set title = 'Денежное мышление' %}
+	{% set description = 'Двухдневный тренинг от тренеров компании “Бизнес-Молодость” и лидеров Katana Group' %}
+	{% set image = 'img/speaker.jpg' %}
+	{% set url = 'url' %}
+	{{ macros.meta(title, description, image, url) }}
+{% endblock %}
+
+{% block css %}
+	{{ macros.css('css/style.min.css') }}
+{% endblock %}
+
+{% block js %}
+	{{ macros.js('js/libs.min.js') }}
+	{{ macros.js('js/vanilla.main.js') }}
+	{{ macros.js('js/jquery.main.js') }}
+{% endblock %}
+
+{% block content %}
+	{% include 'pages/index/greeting.twig' %}
+	{% include 'pages/index/problem.twig' %}
+	{% include 'pages/index/happens.twig' %}
+	{% include 'pages/index/result.twig' %}
+	{% include 'pages/index/for-who.twig' %}
+	{% include 'pages/index/after.twig' %}
+	{% include 'pages/index/year.twig' %}
+	{% include 'pages/index/programm.twig' %}
+	{% include 'pages/index/speaker.twig' %}
+	{% include 'pages/index/soul.twig' %}
+	{% include 'pages/index/reviews.twig' %}
+	{% include 'pages/index/request.twig' %}
+	{% include 'pages/index/future.twig' %}
+{% endblock %}

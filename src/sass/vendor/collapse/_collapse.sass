@@ -1,29 +1,35 @@
 .collapse
-  margin-bottom: 30px
+	margin-bottom: 30px
 
-  &__group
-    &:not(:last-child)
-      margin-bottom: 30px
+	&__group
+		background-color: #fff
+		box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)
+		+transition()
+		+offset()
 
-    &-header
-      padding: 10px 15px
-      border-bottom: 1px solid #eaeaea
+		&-header
+			padding: 25px 15px
+			+transition()
+			cursor: pointer
 
-      +transition
+			&:hover
+				background-color: transparentize($color-brand-1, 0.9)
 
-      cursor: pointer
+		&-title
+			line-height: 1.2
+			+font('b')
+			font-size: 20px
 
-      &:hover
-        background-color: transparentize($color-brand-1, 0.9)
+			+min(md)
+				font-size: 22px
 
-    &-title
-      font-weight: bold
-
-    &-body
-      padding: 15px
-      font-size: 16px
-      display: none
-
-  &__group.active &__group
-    &-header
-      border-bottom-color: $color-brand-1
+		&-body
+			padding: 15px
+			font-size: 16px
+			display: none
+		
+		&.active
+			box-shadow: none
+		&.active &
+			&-body
+				box-shadow: 0px 1px 24px 0px rgba(0, 0, 1, 0.09)

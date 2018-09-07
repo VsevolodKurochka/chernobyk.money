@@ -244,6 +244,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 				var _this4 = this;
 
 				new SmoothScroll(this.links, {
+					offset: 100,
 					after: function after() {
 						removeClass(_this4.hamburger, 'active');
 						removeClass(_this4.menu, 'nav__menu_active');

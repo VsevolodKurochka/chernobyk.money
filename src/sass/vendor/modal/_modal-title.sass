@@ -11,8 +11,7 @@
 		letter-spacing: 1.5px
 		line-height: 1.2
 		color: $color-black
-
-		font-weight: bold
+		+font('b')
 
 		&:after
 			content: ''
@@ -20,6 +19,9 @@
 			+size(25%, 2px)
 			transform: translateX(-50%)
 			background-color: $color-brand-1
+
+		+m('white')
+			color: $color-white
 
 		+min(xs)
 			font-size: 18px

@@ -8,9 +8,11 @@
 		+offset()
 
 		&-header
-			padding: 25px 15px
+			padding: 15px
 			+transition()
 			cursor: pointer
+			+min(sm)
+				padding: 25px 15px
 
 			&:hover
 				background-color: transparentize($color-brand-1, 0.9)
@@ -18,7 +20,10 @@
 		&-title
 			line-height: 1.2
 			+font('b')
-			font-size: 20px
+			font-size: 16px
+
+			+min(sm)
+				font-size: 20px
 
 			+min(md)
 				font-size: 22px

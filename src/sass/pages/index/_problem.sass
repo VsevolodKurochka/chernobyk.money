@@ -1,4 +1,5 @@
 .problem
+	font-size: 0
 	overflow: hidden
 	+relative()
 	+bg('../img/problem-bg.jpg')
@@ -28,6 +29,10 @@
 			+padding-y(75px)
 
 	&__image
+		+max(sm)
+			+size(100%, 300px)
+			object-fit: cover
+			
 		+min(sm)
 			+absolute(null, 0, 0)
 			height: calc(100% - 45px)

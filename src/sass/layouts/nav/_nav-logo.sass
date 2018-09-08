@@ -7,6 +7,15 @@
 		
 		img
 			vertical-align: middle
-			
+			+transition()
+
 			+max(md)
 				max-height: 24px
+
+			+min(md)
+				height: 70px
+
+	&_scrolled &__logo
+		img
+			+min(md)
+				height: 30px

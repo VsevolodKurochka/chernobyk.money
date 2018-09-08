@@ -10,6 +10,7 @@
 				position: relative
 				color: $color-white
 				text-decoration: none
+				+transition()
 
 			+max(md)
 				margin-bottom: 10px
@@ -26,7 +27,12 @@
 					margin-right: 15px
 
 				a
-					padding-top: 7.5px
-					padding-bottom: 7.5px
+					+padding-y(5px, 5px)
 
-					+linkEffect3
+					+linkEffect3()
+
+					&.active
+						color: $color-brand-1
+						&:before,
+						&:after
+							width: 100%

@@ -47,8 +47,8 @@
 	</div>
 {% endmacro %}
 
-{% macro formRowSubmit(text) %}
-	<div class="form__row form__row_submit">
+{% macro formRowSubmit(text, class) %}
+	<div class="form__row form__row_submit {{class}}">
 		<button class="form__submit btn btn_lg btn_shadow btn_brand-1 effect effect_bounce-top" type="submit">{{text}}</button>
 	</div>
 {% endmacro %}

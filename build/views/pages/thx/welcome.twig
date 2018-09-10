@@ -1,7 +1,7 @@
 {% import 'pages/index/macros.twig' as macros %}
 
 {% set title = "<strong>Приходи</strong> — и включи программу <strong>“Увеличение дохода”</strong>" %}
-{% set subtitle = "<strong>для участия</strong> Заполните ваши данные и нажмите на <strong>кнопку “оплатить заказ”</strong>" %}
+{% set subtitle = "<strong>для участия</strong> Заполните ваши<br>данные и нажмите на <strong>кнопку<br>“оплатить заказ”</strong>" %}
 
 <section class="welcome">
 	<div class="container">
@@ -9,7 +9,7 @@
 			<div class="col-12 col-sm-6 col-md-6">
 				{{macros.sectionHeader('welcome__header', title, "welcome__title", subtitle, 'welcome__subtitle')}}
 			</div>
-			<div class="hidden visible-md col-md-1"></div>
+			<div class="hidden visible-md visible-lg col-md-1 col-lg-1"></div>
 			<div class="col-12 col-sm-6 col-md-4">
 				<form action="#" class="form form_white form_block" method="POST">
 					<div class="form__content">
@@ -21,7 +21,7 @@
 						{{macros.formRowInput('email', 'email', 'Email', 'img/icon-email.png')}}
 						{{macros.formRowInput('phone', 'phone', 'Телефон', 'img/icon-phone.png')}}
 
-						{{macros.formRowSubmit('Оплатить ЗАКАЗ')}}
+						{{macros.formRowSubmit('Оплатить ЗАКАЗ', 'form__row_submit-center')}}
 					</div>
 				</form>
 			</div>

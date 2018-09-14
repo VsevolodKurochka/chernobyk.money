@@ -3,7 +3,7 @@
 {% set title = "<strong>Приходи</strong> — и включи программу <strong>“Увеличение дохода”</strong>" %}
 {% set subtitle = "<strong>для участия</strong> Заполните ваши<br>данные и нажмите на <strong>кнопку<br>“оплатить заказ”</strong>" %}
 
-<section class="welcome">
+<section class="welcome" id="section-payment">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-sm-6 col-md-6">
@@ -17,9 +17,9 @@
 							{{macros.formControl('check1', 'checks', 'Пакет Gold - 950 грн', 'checked')}}
 							{{macros.formControl('check2', 'checks', 'Пакет Platinum - 5000 грн')}}
 						</div>
-						{{macros.formRowInput('text', 'name', 'Имя', 'img/icon-avatar.png')}}
-						{{macros.formRowInput('email', 'email', 'Email', 'img/icon-email.png')}}
-						{{macros.formRowInput('phone', 'phone', 'Телефон', 'img/icon-phone.png')}}
+						{{macros.formRowInput('text', 'name', 'Имя', '../img/icon-avatar.png')}}
+						{{macros.formRowInput('email', 'email', 'Email', '../img/icon-email.png')}}
+						{{macros.formRowInput('phone', 'phone', 'Телефон', '../img/icon-phone.png')}}
 
 						{{macros.formRowSubmit('Оплатить ЗАКАЗ', 'form__row_submit-center')}}
 					</div>
